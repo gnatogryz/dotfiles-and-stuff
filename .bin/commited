@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+git commit -am "`zenity --title='Commit' --entry --text='Enter a commit message' --width=500`"

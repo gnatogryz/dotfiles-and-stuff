@@ -6,8 +6,9 @@ eval "$(thefuck --alias)"
 # command not found
 # source /usr/share/doc/pkgfile/command-not-found.bash
 
-# abwabwa
-alias xopen="xdg-open"
+# open file in default gui app
+alias xxx="xdg-open"
+
 md () {
     mkdir -p -- "$1" &&
     cd -P -- "$1"

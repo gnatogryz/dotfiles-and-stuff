@@ -449,7 +449,7 @@ wypierdalaj() {
 	git reset --hard HEAD~1
 }
 
-refrash() { 
+refrash() {
 	source ~/.bashrc
 }
 

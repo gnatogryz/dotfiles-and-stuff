@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-
 def createLinks(path)
 	Dir.foreach(path) do |d|
 		next if d == '.' || d == '..' || d == '.git' || d == File.basename(__FILE__)

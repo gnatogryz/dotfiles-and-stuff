@@ -7,16 +7,27 @@ arg = [arg, scope].join('')
 arg += ': ' if arg.length > 0
 
 # res = `zenity --title='Commit' --entry --text='Enter a commit message' --width=500`.strip
-print 'Message: '
 res = ''
+
 begin
-	res = STDIN.gets.chomp
+	print 'Message: '
+	res = STDIN.gets.strip
+
+	return if res.length == 0
+
+	print 'Description: '
+	body = STDIN.gets.strip
+	res += "\n\n#{body}" if body.length > 0
+	print 'Footer (breaking change): '
+	foot = STDIN.gets.strip
+	res += "\n\nBREAKING CHANGE: #{foot}" if foot.length > 0
 rescue Interrupt
 	puts "\naborted"
 	return
 end
+
 return if (res.length == 0)
 
-run = %Q(git commit -am #{(arg+res).dump})
+run = %Q(git commit -am "#{(arg+res).gsub('"', '\"')}")
 puts " → #{run}"
 system run

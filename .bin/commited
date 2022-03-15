@@ -1,7 +1,13 @@
 #!/usr/bin/env ruby
 
-arg = ARGV.join(' ')
+arg, *scope = ARGV
+scope = "(#{scope.join(' ')})" if scope.length > 0
+arg = [arg, scope].join('')
 arg += ': ' if arg.length > 0
-run = %Q(git commit -am "#{arg}`zenity --title='Commit' --entry --text='Enter a commit message' --width=500`")
-puts run
+
+res = `zenity --title='Commit' --entry --text='Enter a commit message' --width=500`.strip
+return if (res.length == 0)
+
+run = %Q(git commit -am #{(arg+res).dump})
+puts " → #{run}"
 system run

@@ -401,6 +401,7 @@ _isroot=false
 ### GNATBASH ###
 
 alias dobrazmiana="commited"
+alias anuluj="git reset HEAD^"
 
 gg() {
 	echo wp

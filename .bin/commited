@@ -6,7 +6,9 @@ scope = "(#{scope.join(' ')})" if scope.length > 0
 arg = [arg, scope].join('')
 arg += ': ' if arg.length > 0
 
-res = `zenity --title='Commit' --entry --text='Enter a commit message' --width=500`.strip
+# res = `zenity --title='Commit' --entry --text='Enter a commit message' --width=500`.strip
+print 'Message: '
+res = gets.chomp
 return if (res.length == 0)
 
 run = %Q(git commit -am #{(arg+res).dump})

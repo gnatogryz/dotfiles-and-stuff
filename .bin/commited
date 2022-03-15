@@ -8,7 +8,13 @@ arg += ': ' if arg.length > 0
 
 # res = `zenity --title='Commit' --entry --text='Enter a commit message' --width=500`.strip
 print 'Message: '
-res = gets.chomp
+res = ''
+begin
+	res = STDIN.gets.chomp
+rescue Interrupt
+	puts "\naborted"
+	return
+end
 return if (res.length == 0)
 
 run = %Q(git commit -am #{(arg+res).dump})

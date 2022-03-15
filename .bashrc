@@ -403,6 +403,10 @@ _isroot=false
 alias dobrazmiana="commited"
 alias anuluj="git reset HEAD^"
 
+alias fix="commited fix"
+alias feat="commited feat"
+alias refactor="commited refactor"
+
 gg() {
 	echo wp
 }

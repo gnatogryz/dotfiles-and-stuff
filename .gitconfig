@@ -27,3 +27,11 @@
 	rebase = false
 [alias]
 	gud = commit -am
+	fix = !commited fix
+	feat = !commited feat
+	chore = !commited chore
+	ci = !commited ci
+	docs = !commited docs
+	refactor = !commited refactor
+	test = !commited test
+	perf = !commited perf

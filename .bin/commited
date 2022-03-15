@@ -2,5 +2,6 @@
 
 arg = ARGV.join(' ')
 arg += ' ' if arg.length > 0
-
-system %Q(git commit -am "#{arg}`zenity --title='Commit' --entry --text='Enter a commit message' --width=500`")
+run = %Q(git commit -am "#{arg}`zenity --title='Commit' --entry --text='Enter a commit message' --width=500`")
+puts run
+system run

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 arg, *scope = ARGV
+arg ||= 'fix'
 scope = "(#{scope.join(' ')})" if scope.length > 0
 arg = [arg, scope].join('')
 arg += ': ' if arg.length > 0

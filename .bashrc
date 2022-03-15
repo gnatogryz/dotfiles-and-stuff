@@ -406,6 +406,7 @@ alias anuluj="git reset HEAD^"
 alias fix="commited fix"
 alias feat="commited feat"
 alias refactor="commited refactor"
+alias chore="commited chore"
 
 gg() {
 	echo wp

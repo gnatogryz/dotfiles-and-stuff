@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-puts 'fix | feat | chore | ci | docs | style | refactor | test | perf'; return if ARGV.length < 1
+(puts 'fix | feat | chore | ci | docs | style | refactor | test | perf'; return) if ARGV.length < 1
 
 arg, *scope = ARGV
 arg ||= 'fix'

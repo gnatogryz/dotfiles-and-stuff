@@ -10,7 +10,7 @@ arg += ': ' if arg.length > 0
 res = ''
 
 begin
-	print 'Message: '
+	print "Summary (#{arg.strip.gsub(':', '')}): "
 	res = STDIN.gets.strip
 
 	return if res.length == 0
@@ -21,6 +21,7 @@ begin
 	print 'Footer (breaking change): '
 	foot = STDIN.gets.strip
 	res += "\n\nBREAKING CHANGE: #{foot}" if foot.length > 0
+	arg.gsub!(':', '!:') if foot.length > 0
 rescue Interrupt
 	puts "\naborted"
 	return

@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 
+puts 'fix | feat | chore | ci | docs | style | refactor | test | perf'; return if ARGV.length < 1
+
 arg, *scope = ARGV
 arg ||= 'fix'
-scope = "(#{scope.join(' ')})" if scope.length > 0
+scope = "(#{scope.join('-')})" if scope.length > 0
 arg = [arg, scope].join('')
 arg += ': ' if arg.length > 0
 

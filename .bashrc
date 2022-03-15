@@ -401,12 +401,17 @@ _isroot=false
 ### GNATBASH ###
 
 alias dobrazmiana="commited"
+alias dz="commited"
 alias anuluj="git reset HEAD^"
 
-alias fix="commited fix"
-alias feat="commited feat"
-alias refactor="commited refactor"
-alias chore="commited chore"
+alias dzfix="commited fix"
+alias dzfeat="commited feat"
+alias dzrefactor="commited refactor"
+alias dzchore="commited chore"
+alias dzperf="commited perf"
+alias dzci="commited ci"
+alias dzstyle="commited style"
+alias dzdocs="commited docs"
 
 gg() {
 	echo wp

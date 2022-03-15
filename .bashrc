@@ -400,10 +400,7 @@ _isroot=false
 
 ### GNATBASH ###
 
-dobrazmiana() {
-	git commit -a -m "$*"
-	echo $@
-}
+alias dobrazmiana="commited"
 
 gg() {
 	echo wp

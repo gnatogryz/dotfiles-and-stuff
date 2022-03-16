@@ -63,5 +63,5 @@ end
 return if (res.length == 0)
 
 run = %Q(git commit -am "#{(arg+res).gsub('"', '\"')}")
-puts " ↳ #{run}".blue
+puts " ↳ #{run.dump}".blue
 system run

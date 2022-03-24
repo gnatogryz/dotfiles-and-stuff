@@ -81,5 +81,5 @@ run = %Q(git commit -am "#{(arg+res).gsub('"', '\"')}")
 puts " ↳ #{run}\n".gsub("\n", "\n   ").blue
 system run
 
-puts " ↳ git push".blue if push
+puts "\n ↳ git push".blue if push
 system 'git push' if push

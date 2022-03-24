@@ -62,7 +62,7 @@ rescue Interrupt
 	return
 end
 
-puts 'Do you want to push the commit right away?'.light_blue
+puts 'Do you want to push the commit right away? '.light_blue + '(enter/esc)'.blue
 push = false
 loop do
 	case $stdin.getch
@@ -81,5 +81,5 @@ run = %Q(git commit -am "#{(arg+res).gsub('"', '\"')}")
 puts " ↳ #{run}\n".gsub("\n", "\n   ").blue
 system run
 
-puts " ↳ git push" if push
+puts " ↳ git push".blue if push
 system 'git push' if push

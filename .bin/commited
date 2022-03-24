@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'io/console'
+
 class String
 	# colorization
 	def colorize(color_code)
@@ -59,6 +61,20 @@ rescue Interrupt
 	puts "\naborted".yellow
 	return
 end
+
+push = false
+loop do
+	case $stdin.getch
+		when "\r"
+			push = true
+			break
+		else
+			push = false
+			break
+	end
+end
+
+puts push
 
 return if (res.length == 0)
 

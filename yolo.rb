@@ -2,7 +2,7 @@
 
 def createLinks(path)
 	Dir.foreach(path) do |d|
-		next if d == '.' || d == '..' || d == '.git' || d == 'd2p-settings.ini' || d == File.basename(__FILE__) || d == '.local'
+		next if d == '.' || d == '..' || d == '.git' || d == File.basename(__FILE__) || d == '.local'
 		# how do paths work in ruby o_O
 		return createLinks(d) if File.directory? d
 

@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
 
+`which lsd`
+`which ruby`
+`which thefuck`
+`which npm`
+`which autojump`
+
 def createLinks(path)
 	Dir.foreach(path) do |d|
 		next if d == '.' || d == '..' || d == '.git' || d == File.basename(__FILE__) || d == '.local'

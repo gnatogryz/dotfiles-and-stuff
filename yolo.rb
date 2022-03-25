@@ -15,7 +15,7 @@ class String
 	end
 
 	def check
-		puts system("which #{self}", :err => File::NULL, :out => File::NULL) ? "#{self} ✔".green : "#{self} ☒".red 
+		puts system("which #{self}", :err => File::NULL, :out => File::NULL) ? "#{self} ✔".green : "#{self} ☒".red
 	end
 end
 

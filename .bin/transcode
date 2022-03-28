@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'pathname'
+require 'fileutils'
+
+ARGV.each do |d|
+	p = Pathname.new(d)
+	next if p.directory?
+
+	outfile = p.sub_ext('-transcoded.mp4')
+
+	retval = system(%Q(HandBrakeCLI -i "#{p}" -Z 'Discord Nitro Medium 5-10 Minutes 720p30' -o "#{outfile}"), :err => File::NULL, :out => File::NULL)
+	puts "#{p.basename} done" if retval
+
+	FileUtils.mv(outfile, outfile.sub('-transcoded', ''), :force => true) if retval
+end

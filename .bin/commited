@@ -68,7 +68,7 @@ run = %Q(git commit -am "#{(arg+res).gsub('"', '\"')}")
 puts " ↳ #{run}\n".gsub("\n", "\n   ").blue
 system run
 
-puts 'Do you want to push the commit right away? '.light_blue + '(enter/esc)'.blue
+puts '\nDo you want to push the commit right away? '.light_blue + '(enter/esc)'.blue
 push = false
 loop do
 	case $stdin.getch

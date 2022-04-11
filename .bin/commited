@@ -81,5 +81,5 @@ loop do
 	end
 end
 
-puts "\n ↳ git push".blue if push
+puts "\n ↳ git push\n".blue if push
 system 'git push' if push

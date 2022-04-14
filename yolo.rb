@@ -19,7 +19,7 @@ class String
 	end
 end
 
-['npm', 'lsd', 'thefuck', 'rg', 'autojump'].each do |_|
+['npm', 'lsd', 'thefuck', 'rg', 'autojump', 'HandBrakeCLI'].each do |_|
 	_.check
 end
 

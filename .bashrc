@@ -18,6 +18,7 @@ alias nr="npm run"
 alias c="code ."
 
 alias pacman="sudo pacman"
+alias nf="clear && echo '' && neofetch && echo ''"
 
 # Tilix fix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
